@@ -1,16 +1,13 @@
-🎓 Student Task Management
+# 🎓 Student Task Management
 
-🌐 [Open Live Website](https://kaushikprijul.github.io/student-task-management/)
+### 🌐 [Open Live Website](https://kaushikprijul.github.io/student-task-management/)
 
-A simple interactive web application for managing student marks and results.
+A simple interactive student marks management application built with **HTML, CSS & JavaScript**.
 
-**✨ Features :**
-- 👨‍🎓 Add student records
-- 📋 Dynamic student table
-- ✅ Pass / Fail result
-- 🔴 Highlight failed students
-- 📊 Calculate average marks
-- 🗑️ Remove student records
-- ⚡ JavaScript DOM manipulation
-- 
-**Week 8 – JavaScript Project**
+**Features:** Add Students • Pass/Fail • Average Marks • Remove Students • Dynamic Table
+
+**Concepts:** DOM • Arrays • Objects • Events • map() • reduce() • filter() • Callbacks
+
+---
+
+### ✨ Week 8 – JavaScript Project
