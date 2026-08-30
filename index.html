@@ -21,35 +21,26 @@
         </div>
 
         <form id="StudentForm">
+
             <div class="input-group">
                 <label>Student Name</label>
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="Enter student name"
-                >
+                <input type="text" id="name" placeholder="Enter student name">
             </div>
+
             <div class="input-group">
                 <label>Subject</label>
-                <input
-                    type="text"
-                    id="subject"
-                    placeholder="Enter subject"
-                >
+                <input type="text" id="subject" placeholder="Enter subject">
             </div>
+
             <div class="input-group">
                 <label>Marks</label>
-                <input
-                    type="number"
-                    id="mark"
-                    placeholder="0 - 100"
-                    min="0"
-                    max="100"
-                >
+                <input type="number" id="mark" placeholder="0 - 100" min="0" max="100">
             </div>
+
             <button type="submit" class="add-btn">
                 + Add Student
             </button>
+
         </form>
 
         <p id="message"></p>
@@ -58,6 +49,7 @@
             <button id="avg" class="action-btn">
                 Calculate Average
             </button>
+
             <button id="rem" class="remove-btn">
                 Remove Student
             </button>
@@ -66,7 +58,9 @@
         <div id="average" class="average"></div>
 
         <div class="table-container">
+
             <table>
+
                 <thead>
                     <tr>
                         <th>Student Name</th>
@@ -75,8 +69,11 @@
                         <th>Result</th>
                     </tr>
                 </thead>
+
                 <tbody id="TableBody"></tbody>
+
             </table>
+
         </div>
 
         <div class="footer">
@@ -85,7 +82,9 @@
         </div>
 
     </div>
+
     <script src="script.js"></script>
+
 </body>
 
 </html>
