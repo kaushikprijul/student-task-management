@@ -1,24 +1,100 @@
+@font-face {
+    font-family: "Betania Patmos";
+    src: url("BetaniaPatmos.ttf") format("truetype");
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Betania Patmos", serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #eef2ff, #f8fafc);
     min-height: 100vh;
     padding: 50px 20px;
-    color: #1e293b;
+    color: #ffffff;
+    background: linear-gradient(
+        -45deg,
+        #0f172a,
+        #312e81,
+        #4c1d95,
+        #172554
+    );
+    background-size: 400% 400%;
+    animation: backgroundMove 12s ease infinite;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+body::before {
+    background: #8b5cf6;
+    top: -100px;
+    left: -100px;
+    animation: floatOne 8s ease-in-out infinite;
+}
+
+body::after {
+    background: #06b6d4;
+    bottom: -100px;
+    right: -100px;
+    animation: floatTwo 10s ease-in-out infinite;
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes floatOne {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(100px, 80px);
+    }
+}
+
+@keyframes floatTwo {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-100px, -80px);
+    }
 }
 
 .container {
     max-width: 950px;
     margin: auto;
-    background: white;
-    border-radius: 18px;
     padding: 40px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 22px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
 }
 
 .header {
@@ -27,21 +103,21 @@ body {
 }
 
 .tag {
-    color: #6366f1;
-    font-size: 13px;
+    color: #c4b5fd;
+    font-size: 12px;
     font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
 }
 
 h1 {
-    font-size: 36px;
-    color: #111827;
-    margin-bottom: 10px;
+    font-size: 48px;
+    font-weight: normal;
+    margin-bottom: 12px;
 }
 
 .subtitle {
-    color: #64748b;
+    color: #ddd6fe;
     font-size: 15px;
 }
 
@@ -61,42 +137,48 @@ form {
 label {
     font-size: 13px;
     font-weight: bold;
-    color: #475569;
+    color: #e2e8f0;
 }
 
 input {
     width: 100%;
-    padding: 12px 14px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
+    padding: 13px 14px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 9px;
     outline: none;
+    color: white;
     font-size: 14px;
-    transition: 0.2s;
+}
+
+input::placeholder {
+    color: #cbd5e1;
 }
 
 input:focus {
-    border-color: #6366f1;
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+    border-color: #c4b5fd;
+    box-shadow: 0 0 0 3px rgba(196, 181, 253, 0.15);
 }
 
 button {
     border: none;
-    border-radius: 8px;
-    padding: 12px 18px;
+    border-radius: 9px;
+    padding: 13px 18px;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.25s;
 }
 
 .add-btn {
-    background: #6366f1;
+    background: #8b5cf6;
     color: white;
 }
 
 .add-btn:hover {
-    background: #4f46e5;
-    transform: translateY(-1px);
+    background: #7c3aed;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
 }
 
 .actions {
@@ -106,26 +188,30 @@ button {
 }
 
 .action-btn {
-    background: #eef2ff;
-    color: #4f46e5;
+    background: rgba(196, 181, 253, 0.2);
+    color: #ede9fe;
+    border: 1px solid rgba(196, 181, 253, 0.3);
 }
 
 .action-btn:hover {
-    background: #e0e7ff;
+    background: rgba(196, 181, 253, 0.3);
+    transform: translateY(-2px);
 }
 
 .remove-btn {
-    background: #fee2e2;
-    color: #dc2626;
+    background: rgba(248, 113, 113, 0.15);
+    color: #fecaca;
+    border: 1px solid rgba(248, 113, 113, 0.3);
 }
 
 .remove-btn:hover {
-    background: #fecaca;
+    background: rgba(248, 113, 113, 0.25);
+    transform: translateY(-2px);
 }
 
 #message {
     text-align: center;
-    color: #16a34a;
+    color: #86efac;
     font-size: 14px;
     font-weight: bold;
     margin-top: 15px;
@@ -134,12 +220,13 @@ button {
 
 .average {
     margin-top: 20px;
-    padding: 15px;
+    padding: 16px;
     text-align: center;
-    background: #f8fafc;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 10px;
     font-weight: bold;
-    color: #334155;
+    color: #ddd6fe;
 }
 
 .table-container {
@@ -150,12 +237,13 @@ button {
 table {
     width: 100%;
     border-collapse: collapse;
+    border-radius: 12px;
     overflow: hidden;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
 }
 
 th {
-    background: #1e293b;
+    background: rgba(15, 23, 42, 0.7);
     color: white;
     padding: 15px;
     text-align: left;
@@ -163,18 +251,26 @@ th {
 }
 
 td {
-    padding: 14px 15px;
-    border-bottom: 1px solid #e5e7eb;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 14px;
 }
 
+tbody tr {
+    transition: 0.25s;
+}
+
 tbody tr:hover {
-    background: #f8fafc;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .fail {
-    background: #fee2e2;
-    color: #b91c1c;
+    background: rgba(239, 68, 68, 0.25);
+    color: #fecaca;
+}
+
+.fail:hover {
+    background: rgba(239, 68, 68, 0.35);
 }
 
 .footer {
@@ -182,12 +278,15 @@ tbody tr:hover {
     justify-content: space-between;
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 1px solid #e5e7eb;
-    color: #94a3b8;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    color: #cbd5e1;
     font-size: 12px;
 }
 
 @media (max-width: 800px) {
+    body {
+        padding: 20px 10px;
+    }
 
     .container {
         padding: 25px;
