@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Management</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <p class="tag">WEEK 8 • JAVASCRIPT PROJECT</p>
+            <h1>Student Task Management</h1>
+            <p class="subtitle">
+                Add students, track marks, and manage results easily.
+            </p>
+        </div>
+
+        <form id="StudentForm">
+            <div class="input-group">
+                <label>Student Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter student name"
+                >
+            </div>
+            <div class="input-group">
+                <label>Subject</label>
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Enter subject"
+                >
+            </div>
+            <div class="input-group">
+                <label>Marks</label>
+                <input
+                    type="number"
+                    id="mark"
+                    placeholder="0 - 100"
+                    min="0"
+                    max="100"
+                >
+            </div>
+            <button type="submit" class="add-btn">
+                + Add Student
+            </button>
+        </form>
+
+        <p id="message"></p>
+
+        <div class="actions">
+            <button id="avg" class="action-btn">
+                Calculate Average
+            </button>
+            <button id="rem" class="remove-btn">
+                Remove Student
+            </button>
+        </div>
+
+        <div id="average" class="average"></div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Subject</th>
+                        <th>Marks</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody id="TableBody"></tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <span>Student Task Management</span>
+            <span>JavaScript • DOM • Events</span>
+        </div>
+
+    </div>
+    <script src="script1.js"></script>
+</body>
+
+</html>
