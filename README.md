@@ -6,8 +6,6 @@ A simple interactive student marks management application built with **HTML, CSS
 
 **Features:** Add Students • Pass/Fail • Average Marks • Remove Students • Dynamic Table
 
-**Concepts:** DOM • Arrays • Objects • Events • map() • reduce() • filter() • Callbacks
-
 ---
 
 ### ✨ Week 8 – JavaScript Project
